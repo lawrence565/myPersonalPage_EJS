@@ -3,6 +3,12 @@ body {
   height: 100vh;
 }
 
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 #briefContainer {
   min-height: 500px;
   height: 40vh;
@@ -15,6 +21,15 @@ body {
   min-width: 200px;
   max-width: 600px;
   margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-btn {
+  width: 130px;
+  align-self: flex-end;
+  margin-top: auto;
+  margin-right: 1rem;
 }
 
 .title {
@@ -153,12 +168,189 @@ input:focus {
   height: 100%;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 451px) and (max-width: 1100px) {
+  .navbar-nav {
+    margin-bottom: 0;
+  }
+
+  #briefContainer {
+    height: fit-content;
+    margin: 1.5rem 0.3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #text-container {
+    margin: 1rem 0;
+  }
+
+  #text-container > p {
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+
+  #img-container {
+    display: inline;
+    text-align: center;
+    width: 60vw;
+    height: fit-content;
+    object-fit: cover;
+    margin: 0.4rem;
+  }
+
+  .about-btn {
+    margin-top: 2rem;
+  }
+
+  .card {
+    min-width: 250px;
+    max-width: 350px;
+    margin: 0.5rem;
+    overflow-y: visible;
+    height: fit-content;
+  }
+
+  .card-body {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-text {
+    height: 70%;
+    margin: 0.3rem;
+    overflow-y: scroll;
+  }
+
   footer {
     display: flex;
     flex-wrap: wrap-reverse;
     height: fit-content;
     padding-bottom: 2rem;
+  }
+
+  footer h3 {
+    font-size: 25px;
+  }
+
+  .contact-form {
+    margin: 1.3rem;
+    margin-top: 2.5rem;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    border-bottom: 1px solid white;
+    margin: 5px;
+    min-width: 75px;
+    width: 100%;
+  }
+
+  .name,
+  .phone {
+    width: 30vw;
+    margin-right: 0.1rem;
+  }
+
+  .message {
+    height: 3rem;
+  }
+
+  .message > input {
+    height: 100%;
+  }
+
+  .social-logo {
+    min-width: 20px;
+    max-width: 35px;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #briefContainer {
+    height: 30vh;
+    margin: 1.5rem 0.3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #text-container > p {
+    padding: 0;
+  }
+
+  #img-container {
+    display: inline;
+    text-align: center;
+    width: 80vw;
+    height: 30vh;
+    margin: 0.4rem;
+  }
+
+  .card {
+    min-width: 250px;
+    max-width: 350px;
+    margin: 0.5rem;
+    overflow-y: visible;
+    height: fit-content;
+  }
+
+  .card-body {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-text {
+    height: 70%;
+    margin: 0.3rem;
+    overflow-y: scroll;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    height: fit-content;
+    padding-bottom: 2rem;
+  }
+
+  footer h3 {
+    font-size: 25px;
+  }
+
+  .contact-form {
+    margin: 1.3rem;
+    margin-top: 2.5rem;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    border-bottom: 1px solid white;
+    margin: 5px;
+    min-width: 75px;
+    width: 100%;
+  }
+
+  .name,
+  .phone {
+    width: 30vw;
+    margin-right: 0.1rem;
+  }
+
+  .message {
+    height: 3rem;
+  }
+
+  .message > input {
+    height: 100%;
   }
 
   .social-logo {
