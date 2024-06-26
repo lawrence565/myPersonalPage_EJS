@@ -1,0 +1,74 @@
+/* profolio project */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.project-container {
+  min-height: 600px;
+  display: flex;
+  margin: 2rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-card .project-img-container {
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.modal-body img {
+  width: 80%;
+  margin: 10px 10%;
+}
+
+.img-container {
+  height: 20vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-container > img {
+  position: relative;
+  top: -40%;
+  width: 100%;
+  object-fit: cover;
+  align-self: center;
+}
+
+.project-card .project-img-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-color: white;
+}
+
+.project-card .project-info {
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 0 1rem 0 1.5rem;
+  background-color: white;
+}

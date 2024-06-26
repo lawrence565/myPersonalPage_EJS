@@ -2,10 +2,10 @@ import express from "express";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.use(bodyParser.urlencoded(true));
-app.use(express.static("frontend/public"));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("index.ejs");

@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="aboutStyle.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-md bg-body-tertiary">
@@ -55,67 +56,33 @@
     </nav>
 
     <div class="img-container">
-      <img src="/images/sakura.jpg" alt="Sakura" />
+      <img src="/images/about-banner.jpg" alt="Hokkaido" />
     </div>
     <section class="about-content">
+      <div id="grid-left"></div>
       <article class="info-article">
         <h1>這裡是關於 Lawrence 的網站</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-          expedita reiciendis, officiis earum modi aperiam cupiditate
-          perspiciatis! Nam omnis officia alias architecto illo, totam corrupti!
-          Molestiae exercitationem deserunt obcaecati optio!
+          我是一個畢業於國立政治大學廣告系的前端工程師，在工作中接觸行銷網站的設計及規劃，使用
+          Webflow 等 No-code 工具，搭建簡單的活動網站，應用於行銷活動當中。
         </p>
         <br />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-          expedita reiciendis, officiis earum modi aperiam cupiditate
-          perspiciatis! Nam omnis officia alias architecto illo, totam corrupti!
-          Molestiae exercitationem deserunt obcaecati optio!
+          在許多次的網頁搭建經驗之中，發現對於網站的興趣，透過自己動手搭建網站的方式，能夠達到許多
+          No-code 工具無法達到的彈性及後端串接功能，因此開始踏入前端領域。
         </p>
         <br />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-          expedita reiciendis, officiis earum modi aperiam cupiditate
-          perspiciatis! Nam omnis officia alias architecto illo, totam corrupti!
-          Molestiae exercitationem deserunt obcaecati optio!
-        </p>
+        <div class="cv">
+          <div class="experience"></div>
+          <div class="education"></div>
+        </div>
+        <div class="back-to-home">
+          <a class="btn btn-primary" href="/"> 回到首頁 </a>
+        </div>
       </article>
-      <br />
-      <div class="back-to-home">
-        <a class="btn btn-primary" href="/"> 回到首頁 </a>
-      </div>
+      <div id="grid-right"></div>
     </section>
-    <footer>
-      <div class="icon-container">
-        <img class="social-logo" src="/images/logos/fb_logo.png" />
-        <img class="social-logo" src="/images/logos/Github_logo.png" />
-        <img class="social-logo" src="/images/logos/Gmail-logo.png" />
-        <img class="social-logo" src="/images/logos/linkedin-logo.svg" />
-      </div>
-      <div class="contact-form">
-        <h3>提出問題</h3>
-        <div class="basic-info">
-          <div class="name">
-            <input type="text" name="name" placeholder="姓名：" />
-          </div>
-          <div style="width: 20"></div>
-          <div class="phone">
-            <input type="tel" name="phone" placeholder="電話：" />
-          </div>
-        </div>
-        <div class="email">
-          <input type="email" name="email" placeholder="郵件：" />
-        </div>
-        <div class="message">
-          <input type="text" name="email" placeholder="請留下訊息：" />
-        </div>
-      </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+
+    <%- include("./Partials/footer.ejs") %>
   </body>
 </html>
