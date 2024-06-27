@@ -1,6 +1,6 @@
 body {
   background-color: rgb(211, 211, 211);
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .navbar {
@@ -45,7 +45,7 @@ body {
 #img-container {
   display: inline;
   width: 400px;
-  height: 30vh;
+  height: fit-content;
   margin: 1rem;
 }
 
@@ -289,7 +289,7 @@ input:focus {
     display: inline;
     text-align: center;
     width: 80vw;
-    height: 30vh;
+    height: fit-content;;
     margin: 0.4rem;
   }
 
