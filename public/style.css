@@ -26,7 +26,7 @@ body {
 
 .about-btn {
   width: 130px;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-top: auto;
   margin-right: 1rem;
 }
@@ -44,7 +44,7 @@ body {
 #img-container {
   display: inline;
   width: 400px;
-  height: 30vh;
+  height: fit-content;
   margin: 1rem;
 }
 
@@ -206,6 +206,7 @@ input:focus {
 
   .about-btn {
     margin-top: 2rem;
+    align-self: flex-end;
   }
 
   .card {
@@ -230,7 +231,7 @@ input:focus {
 
   footer {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: nowrap;
     height: fit-content;
     padding-bottom: 2rem;
   }
@@ -242,7 +243,8 @@ input:focus {
   .contact-form {
     margin: 1.3rem;
     margin-top: 2.5rem;
-    width: 65vw;
+    min-width: 300px;
+    max-width: 40vw;
     display: flex;
     flex-direction: column;
   }
@@ -292,9 +294,13 @@ input:focus {
   #img-container {
     display: inline;
     text-align: center;
+    height: fit-content;
     width: 80vw;
-    height: 30vh;
     margin: 0.4rem;
+  }
+
+  .about-btn {
+    align-self: flex-end;
   }
 
   .card {
