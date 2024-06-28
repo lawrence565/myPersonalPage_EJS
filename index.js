@@ -19,6 +19,10 @@ app.get("/projects", (req, res) => {
   res.render("profolio.ejs");
 });
 
+app.get("/projects-test", (req, res) => {
+  res.render("profolio-test.ejs");
+});
+
 app.listen(port, (req, res) => {
   console.log(`Listening port ${port}....`);
 });

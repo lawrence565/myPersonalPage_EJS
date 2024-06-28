@@ -1,0 +1,121 @@
+.title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 1rem;
+}
+
+/* profolio project */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 5vw;
+  min-height: 60vh;
+  width: 90vw;
+}
+
+.project-card {
+  min-width: 300px;
+  max-width: 500px;
+  padding: 1rem;
+  margin: 0.5rem;
+  object-fit: cover;
+}
+
+.project-container {
+  position: relative;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.img-container {
+  height: 20vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-container > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-name {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 5px;
+  padding: 0.5vw 1vw;
+  margin-bottom: 0;
+  font-size: 1.2em;
+  opacity: 1;
+}
+
+.project-container:hover .project-info {
+  opacity: 1;
+}
+
+.project-container:hover .project-name {
+  opacity: 0;
+}
+
+/* .project-card .project-info {
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 0 1rem 0 1.5rem;
+  background-color: white;
+} */
+
+/* 
+@media screen and (max-width: 450px) {
+  .grid-container {
+    display: flex;
+  }
+
+  .project-container {
+    margin: 1rem 1rem;
+  }
+
+  .project-card .project-img-container {
+    height: 150px;
+    width: 120px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    margin-bottom: 0.2rem;
+  }
+} */
