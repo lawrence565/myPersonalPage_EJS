@@ -8,6 +8,11 @@ body {
   z-index: 100;
 }
 
+.active {
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
 #briefContainer {
   min-height: 500px;
   height: 40vh;

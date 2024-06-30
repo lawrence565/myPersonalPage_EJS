@@ -8,19 +8,15 @@ app.use(bodyParser.urlencoded(true));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", { currentPage: "home" });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about.ejs");
+  res.render("about.ejs", { currentPage: "about" });
 });
 
 app.get("/projects", (req, res) => {
-  res.render("profolio.ejs");
-});
-
-app.get("/projects-test", (req, res) => {
-  res.render("profolio-test.ejs");
+  res.render("profolio.ejs", { currentPage: "profolio" });
 });
 
 app.listen(port, (req, res) => {

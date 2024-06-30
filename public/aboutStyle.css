@@ -5,7 +5,7 @@
   width: 80vw;
   margin-left: 10vw;
   display: grid;
-  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-items: center;
   align-items: center;
 }
