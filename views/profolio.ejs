@@ -15,156 +15,154 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">Lawrence's page</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">首頁</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">關於我</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/projects">作品集</a>
-            </li>
-          </ul>
-          <!-- <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button> 
-          </form>-->
-        </div>
-      </div>
-    </nav>
+    <%- include("./Partials/navbar.ejs") %>
+
     <div class="title">
       <h1>作品集</h1>
     </div>
     <div class="grid-container">
-      <div class="left"></div>
-      <div class="project-container">
-        <div class="project-card">
-          <div class="project-img-container">
-            <img
-              class="project-img"
-              src="/images/sakura.jpg"
-              alt="This is Sakura."
-            />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Go Game</h3>
-            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
+      <div class="project-card">
+        <div class="project-container">
+          <img
+            class="project-img"
+            src="/images/sakura.jpg"
+            alt="This is Sakura."
+          />
+          <div class="project-info overlay">
+            <h3>Go Game</h3>
+            <p class="project-desc">
+              這是關於圍棋的介紹網站，透過使用 HTML 與 CSS 搭建的靜態簡單網站
+            </p>
             <br />
-            <a class="btn btn-primary" href="/Go-to game/index.html">
+            <a
+              class="btn btn-primary"
+              href="/Go-to game/index.html"
+              target="_blank"
+            >
               查看更多
             </a>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img-container">
-            <img
-              class="project-img"
-              src="/images/sakura.jpg"
-              alt="This is Sakura."
-            />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Japan Travel Website</h3>
-            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
-            <br />
-            <a class="btn btn-primary" href="Japan Travel/index.html">
-              查看更多
-            </a>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img-container">
-            <img
-              class="project-img"
-              src="/images/sakura.jpg"
-              alt="This is Sakura."
-            />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Personal Website</h3>
-            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
-            <br />
-            <a class="btn btn-primary" href="Greedy snake/index.html">
-              查看更多
-            </a>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img-container">
-            <img
-              class="project-img"
-              src="/images/sakura.jpg"
-              alt="This is Sakura."
-            />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">GPA calculate Website</h3>
-            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
-            <br />
-            <a class="btn btn-primary" onClick="{props.setOpenCondic}">
-              查看更多
-            </a>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img-container">
-            <img
-              class="project-img"
-              src="/images/sakura.jpg"
-              alt="This is Sakura."
-            />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Google Login Website</h3>
-            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
-            <br />
-            <a class="btn btn-primary" onClick="{props.setOpenCondic}">
-              查看更多
-            </a>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img-container">
-            <img
-              class="project-img"
-              src="/images/sakura.jpg"
-              alt="This is Sakura."
-            />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Online Course System</h3>
-            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
-            <br />
-            <a class="btn btn-primary" onClick="{props.setOpenCondic}">
-              查看更多
-            </a>
-          </div>
+          <h3 class="project-name">Go Game</h3>
         </div>
       </div>
-      <div class="right"></div>
+
+      <div class="project-card">
+        <div class="project-container">
+          <img
+            class="project-img"
+            src="/images/sakura.jpg"
+            alt="This is Sakura."
+          />
+          <div class="project-info overlay">
+            <h3>Greedy Snake</h3>
+            <p class="project-desc">
+              透過 JavaScript 完成的網頁貪食蛇遊戲，使用 localStorage
+              儲存相關資訊，使遊戲能夠有高分紀錄
+            </p>
+            <br />
+            <a
+              class="btn btn-primary"
+              href="/Greedy snake/index.html"
+              target="_blank"
+            >
+              查看更多
+            </a>
+          </div>
+          <h3 class="project-name">Greedy Snake</h3>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-container">
+          <img
+            class="project-img"
+            src="/images/sakura.jpg"
+            alt="This is Sakura."
+          />
+          <div class="project-info overlay">
+            <h3>GPA Calculator</h3>
+            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
+            <br />
+            <a
+              class="btn btn-primary"
+              href="/Go-to game/index.html"
+              target="_blank"
+            >
+              查看更多
+            </a>
+          </div>
+          <h3 class="project-name">GPA Calculator</h3>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-container">
+          <img
+            class="project-img"
+            src="/images/sakura.jpg"
+            alt="This is Sakura."
+          />
+          <div class="project-info overlay">
+            <h3>Online Course System</h3>
+            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
+            <br />
+            <a
+              class="btn btn-primary"
+              href="/Go-to game/index.html"
+              target="_blank"
+            >
+              查看更多
+            </a>
+          </div>
+          <h3 class="project-name">Online Course System</h3>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-container">
+          <img
+            class="project-img"
+            src="/images/sakura.jpg"
+            alt="This is Sakura."
+          />
+          <div class="project-info overlay">
+            <h3>Google Login Website</h3>
+            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
+            <br />
+            <a
+              class="btn btn-primary"
+              href="/Go-to game/index.html"
+              target="_blank"
+            >
+              查看更多
+            </a>
+          </div>
+          <h3 class="project-name">Google Login Website</h3>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-container">
+          <img
+            class="project-img"
+            src="/images/sakura.jpg"
+            alt="This is Sakura."
+          />
+          <div class="project-info overlay">
+            <h3>Japan Travel Website</h3>
+            <p class="project-desc">這是關於 Project 的許多細節與介紹</p>
+            <br />
+            <a
+              class="btn btn-primary"
+              href="/Go-to game/index.html"
+              target="_blank"
+            >
+              查看更多
+            </a>
+          </div>
+          <h3 class="project-name">Japan Travel Website</h3>
+        </div>
+      </div>
     </div>
 
     <%- include("./Partials/footer.ejs") %>

@@ -9,6 +9,11 @@ body {
   z-index: 100;
 }
 
+.active {
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
 #briefContainer {
   min-height: 500px;
   height: 40vh;
@@ -27,7 +32,7 @@ body {
 
 .about-btn {
   width: 130px;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-top: auto;
   margin-right: 1rem;
 }
@@ -97,6 +102,11 @@ img {
 button {
   align-self: flex-end;
   margin-top: auto;
+}
+
+.modal-body img {
+  width: 80%;
+  margin: 10px 10%;
 }
 
 /* Footer Part */
@@ -202,6 +212,7 @@ input:focus {
 
   .about-btn {
     margin-top: 2rem;
+    align-self: flex-end;
   }
 
   .card {
@@ -226,7 +237,7 @@ input:focus {
 
   footer {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: nowrap;
     height: fit-content;
     padding-bottom: 2rem;
   }
@@ -238,7 +249,8 @@ input:focus {
   .contact-form {
     margin: 1.3rem;
     margin-top: 2.5rem;
-    width: 65vw;
+    min-width: 300px;
+    max-width: 40vw;
     display: flex;
     flex-direction: column;
   }
@@ -288,9 +300,14 @@ input:focus {
   #img-container {
     display: inline;
     text-align: center;
+    height: fit-content;
     width: 80vw;
-    height: fit-content;;
+    height: 30vh;
     margin: 0.4rem;
+  }
+
+  .about-btn {
+    align-self: flex-end;
   }
 
   .card {
