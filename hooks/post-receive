@@ -1,0 +1,2 @@
+#!/bin/bash
+GIT_WORK_TREE=/var/www/your_live_site git checkout -f

@@ -302,7 +302,7 @@ input:focus {
     text-align: center;
     height: fit-content;
     width: 80vw;
-    height: 30vh;
+    height: fit-content;
     margin: 0.4rem;
   }
 
