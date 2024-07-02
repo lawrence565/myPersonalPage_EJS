@@ -13,6 +13,8 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
   margin: 5vw;
   min-height: 60vh;
   width: 90vw;
@@ -20,13 +22,16 @@ h1 {
 
 .project-card {
   min-width: 300px;
-  max-width: 500px;
   padding: 1rem;
   margin: 0.5rem;
   object-fit: cover;
+  display: flex;
+  justify-content: center;
 }
 
 .project-container {
+  max-width: 90%;
+  aspect-ratio: 4/3;
   position: relative;
   border-radius: 10px;
 }
