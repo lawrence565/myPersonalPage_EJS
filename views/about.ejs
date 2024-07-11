@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="resumeStyle.css" />
     <link rel="stylesheet" href="aboutStyle.css" />
   </head>
   <body>
@@ -20,7 +21,6 @@
       <img src="/images/about-banner.jpg" alt="Hokkaido" />
     </div>
     <section class="about-content">
-      <div id="grid-left"></div>
       <article class="info-article">
         <h1>這裡是關於 Lawrence 的網站</h1>
         <p>
@@ -33,15 +33,11 @@
           No-code 工具無法達到的彈性及後端串接功能，因此開始踏入前端領域。
         </p>
         <br />
-        <div class="cv">
-          <div class="experience"></div>
-          <div class="education"></div>
-        </div>
-        <div class="back-to-home">
-          <a class="btn btn-primary" href="/"> 回到首頁 </a>
-        </div>
       </article>
-      <div id="grid-right"></div>
+      <%- include("resume.ejs") %>
+      <div class="back-to-home">
+        <a class="btn btn-primary" href="/"> 回到首頁 </a>
+      </div>
     </section>
 
     <%- include("./Partials/footer.ejs") %>

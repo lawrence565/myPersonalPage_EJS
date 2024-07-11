@@ -4,10 +4,94 @@ section {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .resume-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 60vw;
+  grid-template-columns: 2fr 5fr;
+  width: 70vw;
+}
+
+.education,
+.experience {
+  padding: 1rem;
+}
+
+.college,
+.job {
+  padding: 0.5rem 0;
+}
+
+.college:hover,
+.job:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  border-bottom: 6px solid gray;
+  border-right: 6px solid gray;
+  top: -10px;
+  left: -12px;
+  width: 120%;
+  z-index: 10;
+}
+
+.college-title,
+.company {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.company > p {
+  margin-top: 0.5rem;
+}
+
+.english-name,
+.job-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
+.title a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.academy {
+  padding: 0;
+}
+
+.academy > li {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 451px) and (max-width: 1100px) {
+  .resume-container {
+    width: 90vw;
+  }
+
+  .english-name {
+    font-size: 50%;
+  }
+
+  .education {
+    font-size: 100%;
+  }
+
+  .academy {
+    padding: 0;
+  }
+
+  .academy > li {
+    list-style-type: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
 }
