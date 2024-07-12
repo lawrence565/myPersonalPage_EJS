@@ -16,7 +16,7 @@
       <img class="social-logo" src="/images/logos/linkedin-logo.svg" />
     </a>
   </div>
-  <div class="contact-form">
+  <form class="contact-form" action="/message" method="post">
     <h3>聯絡我</h3>
     <div class="basic-info">
       <div class="name">
@@ -31,9 +31,16 @@
       <input type="email" name="email" placeholder="郵件：" />
     </div>
     <div class="message">
-      <input type="text" name="email" placeholder="請留下訊息：" />
+      <input type="text" name="message" placeholder="請留下訊息：" />
     </div>
-  </div>
+    <button
+      class="btn btn-primary submit"
+      type="submit"
+      onclick="alert('已收到您的表單，即將回到首頁')"
+    >
+      送出
+    </button>
+  </form>
 </footer>
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
