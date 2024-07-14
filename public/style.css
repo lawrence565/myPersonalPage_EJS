@@ -106,6 +106,7 @@ button {
 
 .modal-body {
   width: 90%;
+  margin-left: 5%;
 }
 
 .modal-body > img {
@@ -359,7 +360,8 @@ textarea:focus {
     display: flex;
     flex-wrap: wrap-reverse;
     height: fit-content;
-    padding-bottom: 2rem;
+    padding: 0;
+    padding-bottom: 1.5rem;
   }
 
   footer h3 {
@@ -369,7 +371,7 @@ textarea:focus {
   .contact-form {
     margin: 1.3rem;
     margin-top: 2.5rem;
-    width: 65vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
   }
