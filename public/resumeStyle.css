@@ -94,4 +94,9 @@ section {
 }
 
 @media screen and (max-width: 450px) {
+  .resume-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
 }
