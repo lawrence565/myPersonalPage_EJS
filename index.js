@@ -32,12 +32,12 @@ app.get("/preview", (req, res) => {
   res.render("resume.ejs", { currentPage: "profolio" });
 });
 
-app.post("/message", (req, res) => {
+app.post("/message", async (req, res) => {
   let message = req.body;
 
   try {
     db.connect();
-    db.query(
+    await db.query(
       "INSERT INTO message (name, phone, email, message) VALUES ($1, $2, $3, $4)",
       [message.name, message.phone, message.email, message.message],
       (err, res) => {
