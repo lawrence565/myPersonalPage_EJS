@@ -13,7 +13,6 @@ const db = new pg.Client({
   port: process.env.POSTGRES_PORT,
 });
 
-db.connect();
 app.use(bodyParser.urlencoded(true));
 app.use(express.static("public"));
 
