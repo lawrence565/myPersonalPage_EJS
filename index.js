@@ -36,19 +36,13 @@ app.post("/message", async (req, res) => {
   let message = req.body;
 
   try {
-    db.connect();
-    await db.query(
+    await db.connect();
+    const result = await db.query(
       "INSERT INTO message (name, phone, email, message) VALUES ($1, $2, $3, $4)",
-      [message.name, message.phone, message.email, message.message],
-      (err, res) => {
-        if (err) {
-          console.error("Error executing query", err.stack);
-        } else {
-          console.log("Store message success.");
-        }
-      }
+      [message.name, message.phone, message.email, message.message]
     );
-    db.end();
+    console.log(result);
+    await db.end();
   } catch (e) {
     console.log(e);
   }
