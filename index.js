@@ -5,7 +5,7 @@ import "dotenv/config";
 
 const app = express();
 const port = 3000;
-const db = new pg.Client({
+const db = new pg.Pool({
   user: process.env.POSTGRES_USER,
   host: process.env.POSTGRES_HOST,
   database: "Message",
@@ -36,13 +36,12 @@ app.post("/message", async (req, res) => {
   let message = req.body;
 
   try {
-    await db.connect();
     const result = await db.query(
       "INSERT INTO message (name, phone, email, message) VALUES ($1, $2, $3, $4)",
       [message.name, message.phone, message.email, message.message]
     );
     console.log(result);
-    await db.end();
+    
   } catch (e) {
     console.log(e);
   }
