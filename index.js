@@ -32,8 +32,8 @@ app.get("/preview", (req, res) => {
   res.render("resume.ejs", { currentPage: "profolio" });
 });
 
-app.post("/message", async (req, res) => {
-  let message = req.body;
+app.get("/message", async (req, res) => {
+  let message = req.query;
 
   try {
     const result = await db.query(
@@ -41,7 +41,6 @@ app.post("/message", async (req, res) => {
       [message.name, message.phone, message.email, message.message]
     );
     console.log(result);
-    
   } catch (e) {
     console.log(e);
   }
