@@ -40,12 +40,23 @@ app.get("/message", async (req, res) => {
       "INSERT INTO message (name, phone, email, message) VALUES ($1, $2, $3, $4)",
       [message.name, message.phone, message.email, message.message]
     );
-    console.log(result);
+    console.log(result.rows);
   } catch (e) {
     console.log(e);
   }
 
   res.redirect("/");
+});
+
+app.get("/received", async (req, res) => {
+  let data
+  try {
+    const result = await db.query("SELECT * FROM message");
+    data = result.rows
+  } catch (e) {
+    console.log(e);
+  }
+  res.render("message.ejs", { messages: data, currentPage: "home" });
 });
 
 app.listen(port, (req, res) => {
