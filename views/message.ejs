@@ -21,13 +21,16 @@
       <div class="card message-card">
         <div class="card-body message-content">
           <h5 class="card-title"><%= element.name %></h5>
-          <p class="card-text"><%= element.message %></p>
+          <p class="card-text message"><%= element.message %></p>
           <br />
           <div>
-            <p class="card-text contact"><%= element.phone %></p>
-            <p class="card-text contact"><%= element.email %></p>
-            <p class="card-text contact"><%= element.date %></p>
-            <p class="card-text contact"><%= element.time %></p>
+            <p class="card-text contact">電話：<%= element.phone %></p>
+            <p class="card-text contact">郵件：<%= element.email %></p>
+            <p class="card-text time">
+              日期：<%= element.date %>
+              <br />
+              時間：<%= element.time %>
+            </p>
           </div>
 
           <button

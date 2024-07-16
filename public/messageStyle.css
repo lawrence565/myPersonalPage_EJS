@@ -11,9 +11,19 @@
   width: 25vw;
 }
 
+.message {
+  min-height: 60px;
+}
+
 .contact {
   padding: 0;
   font-size: smaller;
+}
+
+.time {
+  padding: 0;
+  font-size: smaller;
+  height: fit-content;
 }
 
 @media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -32,10 +42,15 @@
   }
 
   .message-card {
-    height: 30vh;
+    height: fit-content;
     overflow-x: scroll;
     max-width: 500px;
     width: 80vw;
+  }
+
+  .message-content {
+    height: fit-content;
+    overflow-y: visible;
   }
 
   p.contact {

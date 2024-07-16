@@ -36,7 +36,9 @@ app.get("/message", async (req, res) => {
   let message = req.query;
 
   const date = new Date();
-  const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+  const day = `${date.getFullYear()}-${
+    date.getMonth() < 10 ? "0" + date.getMonth().toString() : date.getMonth()
+  }-${date.getDate() < 10 ? "0" + date.getDate().toString() : date.getDate()}`;
   const time = `${date.getHours()}:${
     date.getMinutes() < 10
       ? "0" + date.getMinutes().toString()
