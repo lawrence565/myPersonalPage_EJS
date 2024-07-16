@@ -40,7 +40,7 @@ app.get("/message", async (req, res) => {
       "INSERT INTO message (name, phone, email, message) VALUES ($1, $2, $3, $4)",
       [message.name, message.phone, message.email, message.message]
     );
-    console.log(result);
+    console.log(result.rows);
   } catch (e) {
     console.log(e);
   }
@@ -55,7 +55,7 @@ app.get("/received", async (req, res) => {
   } catch (e) {
     console.log(e);
   }
-  res.render("index.ejs", { currentPage: "profolio" });
+  res.render("message.ejs", { data: result.rows });
 });
 
 app.listen(port, (req, res) => {
