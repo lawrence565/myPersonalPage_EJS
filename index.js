@@ -48,6 +48,16 @@ app.get("/message", async (req, res) => {
   res.redirect("/");
 });
 
+app.get("/received", async (req, res) => {
+  try {
+    const result = await db.query("SELECT * FROM message");
+    console.log(result);
+  } catch (e) {
+    console.log(e);
+  }
+  res.render("index.ejs");
+});
+
 app.listen(port, (req, res) => {
   console.log(`Listening port ${port}....`);
 });
