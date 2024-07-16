@@ -49,13 +49,14 @@ app.get("/message", async (req, res) => {
 });
 
 app.get("/received", async (req, res) => {
+  let data
   try {
     const result = await db.query("SELECT * FROM message");
-    console.log(result.rows);
+    data = result.rows
   } catch (e) {
     console.log(e);
   }
-  res.render("message.ejs", { data: result.rows });
+  res.render("message.ejs", { messages: data, currentPage: "home" });
 });
 
 app.listen(port, (req, res) => {
