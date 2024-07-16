@@ -11,19 +11,23 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="messageStyle.css" />
   </head>
   <body>
     <%- include("./Partials/navbar.ejs") %>
 
-    <div class="card-container">
+    <div class="card-container message-container">
       <% messages.forEach(element => {%>
-      <div class="card">
-        <div class="card-body">
+      <div class="card message-card">
+        <div class="card-body message-content">
           <h5 class="card-title"><%= element.name %></h5>
           <p class="card-text"><%= element.message %></p>
           <br />
-          <p class="card-text"><%= element.phone %></p>
-          <p class="card-text"><%= element.email %></p>
+          <div>
+            <p class="card-text contact"><%= element.phone %></p>
+            <p class="card-text contact"><%= element.email %></p>
+          </div>
+
           <button
             type="button"
             class="btn btn-primary"
