@@ -51,11 +51,11 @@ app.get("/message", async (req, res) => {
 app.get("/received", async (req, res) => {
   try {
     const result = await db.query("SELECT * FROM message");
-    console.log(result);
+    console.log(result.rows);
   } catch (e) {
     console.log(e);
   }
-  res.render("index.ejs");
+  res.render("index.ejs", { currentPage: "profolio" });
 });
 
 app.listen(port, (req, res) => {
