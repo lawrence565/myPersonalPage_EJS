@@ -35,12 +35,24 @@ app.get("/preview", (req, res) => {
 app.get("/message", async (req, res) => {
   let message = req.query;
 
+  const date = new Date();
+  const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+  const time = `${date.getHours()}:${
+    date.getMinutes() < 10
+      ? "0" + date.getMinutes().toString()
+      : date.getSeconds()
+  }:${
+    date.getSeconds() < 10
+      ? "0" + date.getSeconds().toString()
+      : date.getSeconds()
+  }`;
+  console.log("日期與時間為：", day, time);
+
   try {
     const result = await db.query(
-      "INSERT INTO message (name, phone, email, message) VALUES ($1, $2, $3, $4)",
-      [message.name, message.phone, message.email, message.message]
+      "INSERT INTO message (name, phone, email, message, date, time) VALUES ($1, $2, $3, $4, $5, $6)",
+      [message.name, message.phone, message.email, message.message, day, time]
     );
-    console.log(result.rows);
   } catch (e) {
     console.log(e);
   }
@@ -49,14 +61,18 @@ app.get("/message", async (req, res) => {
 });
 
 app.get("/received", async (req, res) => {
-  let data
+  let data;
+
   try {
     const result = await db.query("SELECT * FROM message");
-    data = result.rows
+    data = result.rows;
   } catch (e) {
     console.log(e);
   }
-  res.render("message.ejs", { messages: data, currentPage: "home" });
+  res.render("message.ejs", {
+    messages: data,
+    currentPage: "home",
+  });
 });
 
 app.listen(port, (req, res) => {
