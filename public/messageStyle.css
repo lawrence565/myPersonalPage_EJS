@@ -1,12 +1,15 @@
 .message-container {
+  margin-top: 2rem;
+  height: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
 }
 
 .message-card {
-  height: 20vh;
-  overflow-x: scroll;
+  min-height: 20vh;
+  height: fit-content;
+  overflow-y: scroll;
   max-width: 500px;
   width: 25vw;
 }
@@ -15,8 +18,14 @@
   min-height: 60px;
 }
 
+.message-content {
+  height: fit-content;
+  overflow-y: visible;
+}
+
 .contact {
   padding: 0;
+  height: fit-content;
   font-size: smaller;
 }
 
@@ -30,30 +39,23 @@
   .message-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  .message-card {
+    width: 35vw;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .message-container {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
     justify-content: center;
     align-items: center;
   }
 
   .message-card {
     height: fit-content;
-    overflow-x: scroll;
     max-width: 500px;
     width: 80vw;
-  }
-
-  .message-content {
-    height: fit-content;
-    overflow-y: visible;
-  }
-
-  p.contact {
-    height: fit-content;
   }
 }
